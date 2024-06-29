@@ -10,12 +10,13 @@ const filtersSlice = createSlice({
   reducers: {
     changeFilter(state, action) {
       state.name = action.payload;
+      console.log(state.name);
     },
   },
 });
 
 export function selectNameFilter(state) {
-  return state.name;
+  return state.filters.name;
 }
 
 export const { changeFilter } = filtersSlice.actions;
